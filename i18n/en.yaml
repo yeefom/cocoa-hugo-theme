@@ -17,4 +17,4 @@
     other: "{{ .Count }} minutes read"
 
 - id: backToPosts
-  translation: "Back to posts"
+  translation: "< Back to posts"
