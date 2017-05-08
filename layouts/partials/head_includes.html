@@ -52,5 +52,5 @@
 
 <!-- RSS -->
 {{ if .RSSLink }}
-  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .Site.Params.rss }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 {{ end }}
