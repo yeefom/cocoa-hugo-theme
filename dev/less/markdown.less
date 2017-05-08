@@ -3,9 +3,9 @@ section.main .content {
 
 @background-gray: #f7f7f7;
 
-// 
+//
 // Heading
-// 
+//
 
 h1, h2, h3, h4, h5, h6 {
     .heading();
@@ -34,13 +34,13 @@ h4, h5, h6 {
     letter-spacing: none;
 }
 
-// 
+//
 // Code
-// 
+//
 
 code, pre {
     font-family: @monospace-font-stack;
-    font-size: 1rem;
+    font-size: @mono-font-size;
     background-color: @background-gray;
 }
 
@@ -66,7 +66,7 @@ pre {
 pre code {
     /* enclosed by 3 backticks (```) */
     padding: 0;
-    font-size: 1rem;
+    font-size: @mono-font-size;
 }
 
 a code {
@@ -76,9 +76,9 @@ a code {
     }
 }
 
-// 
+//
 // Body text
-// 
+//
 
 
 p {
