@@ -7,24 +7,27 @@
                     {{ .Content }}
                 </div>
             {{ end }}
-            {{ $totalpostscount := len (where .Data.Pages "Section" "blog") }}
-            {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }}
-            {{ if gt $latestpostscount 0 }}
-              <div class="page-heading">{{ i18n "latestPosts" }}</div>
-                <ul>
-                    {{ range (first $latestpostscount (where .Data.Pages.ByPublishDate "Section" "blog")) }}
-                        {{ partial "li.html" . }}
+            <!-- {{ $totalpostscount := len (where .Data.Pages "Section" "blog") }} -->
+            <!-- {{ $latestpostscount := .Site.Params.latestpostscount | default $totalpostscount }} -->
+            <!-- {{ if gt $latestpostscount 0 }} -->
+              <!-- <div class="page-heading">{{ i18n "latestPosts" }}</div> -->
+                <div>
+                    {{ $paginator := .Paginate (where .Data.Pages.ByPublishDate "Section" "blog") }}
+                    {{ range $paginator.Pages }}
+                        {{ partial "post.html" . }}
                     {{ end }}
-                    {{ if gt $totalpostscount $latestpostscount }}
+                    {{ template "_internal/pagination.html" . }}
+                    <!-- {{ if $paginator.HasPrev }} {{$paginator.Prev}} {{ end }} {{ if $paginator.HasNext }} Older Posts → {{ end }} -->
+   <!--                  {{ if gt $totalpostscount $latestpostscount }}
                         {{ range where .Site.Menus.main "Identifier" "blog" }}
                             <li class="post-item no-bullet">
                                 <a id="see-more" {{ printf "href=%q " .URL | safeHTMLAttr }}><span>See more&hellip;</span></a>
                             </li>
                         {{ end }}
-                    {{ end }}
-                </ul>
+                    {{ end }} -->
+                </div>
               </div>
-            {{ end }}
+            <!-- {{ end }} -->
     </div>
 </section>
 {{ partial "footer.html" . }}
