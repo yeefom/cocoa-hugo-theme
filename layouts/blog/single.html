@@ -14,19 +14,16 @@
                     {{ else }}
                     <div class="date" title='{{ .Date.Format "Mon Jan 2 2006 15:04:05 MST" }}'>{{ .Date.Format "Jan 2, 2006" }}</div>
                     {{ end }}
-                    {{ if not .Site.Params.noshowreadtime }}
-		    <div class="reading-time"><div class="middot"></div>{{ i18n "readingTime" .ReadingTime }}</div>
-                    {{ end }}
                 </div>
             </div>
             <div class="markdown">
                 {{ .Content }}
+                <div class="symbol" style="text-align: center;font-size: 1.1em;color: #eee;">
+                    <p>◆</p>
+                </div>
                 <br>
             </div>
             <br>
-            <div class="disqus">
-                {{ template "_internal/disqus.html" . }}
-            </div>
         </div>
     </div>
 </section>
