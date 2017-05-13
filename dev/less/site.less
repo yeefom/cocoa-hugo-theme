@@ -100,22 +100,10 @@ section.header {
     .flex-order(0);
 }
 section.icons {
-    .flex-order(1);
-}
-section.main {
     .flex-order(2);
 }
-
-@media (min-width: @wide-1-breakpoint) {
-    section.header {
-        .flex-order(0);
-    }
-    section.icons {
-        .flex-order(2);
-    }
-    section.main {
-        .flex-order(1);
-    }
+section.main {
+    .flex-order(1);
 }
 
 // Styles for sections and contents
@@ -475,7 +463,7 @@ section.header {
 }
 
 section.icons {
-    padding-top: 0;
+    padding-top: @vspacing;
     padding-bottom: @vspacing;
 }
 
@@ -554,4 +542,18 @@ img.profile {
 
 .page-heading a {
     color: @black;
+}
+
+.footer-container {
+    color: @gray;
+    text-align: center;
+    .copyright {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: @wide-1-breakpoint) {
+    .footer-container {
+        text-align: left;
+    }
 }

@@ -40,44 +40,48 @@
 
 <section class="icons">
     <div class="container">
-        <div class="content">
+        <div class="footer-container">
+            <div class="content">
+                {{ if .Site.Params.github }}
+                    <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener"><img class="icon" src="/img/github.svg" alt="github" /></a>
+                {{ end }}
 
-        {{ if .Site.Params.github }}
-            <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener"><img class="icon" src="/img/github.svg" alt="github" /></a>
-        {{ end }}
+                {{ if .Site.Params.twitter }}
+                    <a href="{{ .Site.Params.twitter }}" target="_blank" rel="noopener"><img class="icon" src="/img/twitter.svg" alt="twitter" /></a>
+                {{ end }}
 
-        {{ if .Site.Params.twitter }}
-            <a href="{{ .Site.Params.twitter }}" target="_blank" rel="noopener"><img class="icon" src="/img/twitter.svg" alt="twitter" /></a>
-        {{ end }}
+                {{ if .Site.Params.mastodon }}
+                    <a href="{{ .Site.Params.mastodon }}" target="_blank" rel="noopener"><img class="icon" src="/img/mastodon.svg" alt="mastodon" /></a>
+                {{ end }}
 
-        {{ if .Site.Params.mastodon }}
-            <a href="{{ .Site.Params.mastodon }}" target="_blank" rel="noopener"><img class="icon" src="/img/mastodon.svg" alt="mastodon" /></a>
-        {{ end }}
+                {{ if .Site.Params.linkedin }}
+                    <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener"><img class="icon" src="/img/linkedin.svg" alt="linkedin" /></a>
+                {{ end }}
 
-        {{ if .Site.Params.linkedin }}
-            <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener"><img class="icon" src="/img/linkedin.svg" alt="linkedin" /></a>
-        {{ end }}
+                {{ if .Site.Params.facebook }}
+                    <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener"><img class="icon" src="/img/facebook.svg" alt="facebook" /></a>
+                {{ end }}
 
-        {{ if .Site.Params.facebook }}
-            <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener"><img class="icon" src="/img/facebook.svg" alt="facebook" /></a>
-        {{ end }}
+                {{ if .Site.Params.soundcloud }}
+                    <a href="{{ .Site.Params.soundcloud }}" target="_blank" rel="noopener"><img class="icon" src="/img/soundcloud.svg" alt="soundcloud" /></a>
+                {{ end }}
 
-        {{ if .Site.Params.soundcloud }}
-            <a href="{{ .Site.Params.soundcloud }}" target="_blank" rel="noopener"><img class="icon" src="/img/soundcloud.svg" alt="soundcloud" /></a>
-        {{ end }}
+                {{ if .Site.Params.email }}
+                    <a href="mailto:{{ .Site.Params.email }}"><img class="icon" src="/img/email.svg" alt="email" /></a>
+                {{ end }}
 
-        {{ if .Site.Params.email }}
-            <a href="mailto:{{ .Site.Params.email }}"><img class="icon" src="/img/email.svg" alt="email" /></a>
-        {{ end }}
-
-        {{ if .Site.RSSLink }}
-            <a href="{{ .Site.Params.rss }}"><img class="icon" src="/img/rss.svg" alt="rss" /></a>
-        {{ end }}
-        {{ if and .Site.Params.i18n_flags .IsTranslated }}
-            {{ range .Translations }}
-                <a href="{{ .Permalink }}"><img class="icon flag" src="/img/flags/{{ .Lang }}.svg"></a>
-            {{ end }}
-        {{ end }}
+                {{ if .Site.RSSLink }}
+                    <a href="{{ .Site.Params.rss }}"><img class="icon" src="/img/rss.svg" alt="rss" /></a>
+                {{ end }}
+                {{ if and .Site.Params.i18n_flags .IsTranslated }}
+                    {{ range .Translations }}
+                        <a href="{{ .Permalink }}"><img class="icon flag" src="/img/flags/{{ .Lang }}.svg"></a>
+                    {{ end }}
+                {{ end }}
+            </div>
+            <div class="content copyright">
+                &copy; 2012–2017 {{ .Site.Params.author }}
+            </div>
         </div>
     </div>
 </section>
