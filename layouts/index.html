@@ -12,7 +12,15 @@
                     {{ range $paginator.Pages }}
                         {{ partial "post.html" . }}
                     {{ end }}
-                    {{ template "_internal/pagination.html" . }}
+                    <div class="pagination">
+                        {{ if $paginator.HasPrev}}
+                            <a class="prev" href="{{$paginator.Prev.URL}}">{{ i18n "prev" }}</a>
+                        {{ end }}
+
+                        {{ if $paginator.HasNext}}
+                            <a class="next" href="{{$paginator.Next.URL}}">{{ i18n "next" }}</a>
+                        {{ end }}
+                    </div>
                 </div>
               </div>
     </div>
