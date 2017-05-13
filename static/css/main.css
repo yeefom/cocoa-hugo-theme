@@ -67,6 +67,7 @@ sup {
 }
 .footnotes ol li {
   list-style-type: decimal !important;
+  padding-left: 0 !important;
 }
 .pagination .next {
   float: right;
@@ -540,6 +541,9 @@ section.main {
   section.main .container .content ul {
     padding-left: 40px;
   }
+  section.main .container .content ol li {
+    padding-left: 40px;
+  }
   section.main .container .content .post-item {
     display: flex;
     list-style: none;
@@ -689,6 +693,9 @@ section.main .content .markdown ul {
 section.main .content .markdown li {
   list-style-type: disc;
   list-style-position: inside;
+}
+section.main .content .markdown ol li {
+  list-style-type: decimal;
 }
 section.main .content .markdown em {
   font-style: italic;
