@@ -1,7 +1,9 @@
 <div class="content">
     <div class="front-matter">
         <div class="title-container">
-            {{ partial "page-heading" . }}
+            <div class="page-heading">
+                <a href="{{ .Permalink }}"><span>{{ .Title }}</span></a>
+            </div>
             <div class="initials"><a href="{{ .Site.BaseURL }}">{{ .Site.Params.Initials }}</a></div>
         </div>
         <div class="meta">
@@ -9,9 +11,6 @@
             <div class="date" title='{{ .Date.Format .Site.Params.dateformfull }}'>{{ .Date.Format .Site.Params.dateform }}</div>
             {{ else }}
             <div class="date" title='{{ .Date.Format "Mon Jan 2 2006 15:04:05 MST" }}'>{{ .Date.Format "Jan 2, 2006" }}</div>
-            {{ end }}
-            {{ if not .Site.Params.noshowreadtime }}
-                <div class="reading-time">{{ i18n "readingTime" .ReadingTime }}</div>
             {{ end }}
         </div>
     </div>
