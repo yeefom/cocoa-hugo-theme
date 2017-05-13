@@ -184,6 +184,7 @@ section.header {
 @media (min-width: @wide-1-breakpoint) {
     section.header {
         background-color: transparent;
+        border-bottom: 1px solid @background;
 
         .container {
             .justify-content(flex-start);
@@ -261,6 +262,7 @@ section.icons {
 @media (min-width: @wide-1-breakpoint) {
     section.icons {
         background-color: transparent;
+        border-top: 1px solid @background;
 
         .container {
             .justify-content(flex-start);
@@ -491,9 +493,11 @@ section.main {
     }
 
     section.main {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding-top: @vspacing;
+        padding-bottom: @vspacing;
+    }
 
+    section.main {
         .container {
             .content {
                 ul {
@@ -557,4 +561,11 @@ img.profile {
     .footer-container {
         text-align: left;
     }
+}
+
+.symbol {
+    text-align: center;
+    font-size: 1.1em;
+    color: #eee;
+    margin-bottom: @vspacing;
 }
