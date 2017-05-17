@@ -10,7 +10,9 @@
   <script type="text/javascript">
     hljs.initHighlightingOnLoad();
   </script>
+{{ end }}
 
+{{ if .Site.Params.clickyId }}
   <script src="//static.getclicky.com/js" type="text/javascript"></script>
   <script type="text/javascript">try{clicky.init({{ .Site.Params.clickyId }});}catch(e){}</script>
 {{ end }}
