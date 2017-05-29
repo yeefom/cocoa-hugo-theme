@@ -475,10 +475,10 @@ section.main .container .content .post-item {
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  align-items: baseline;
 }
 section.main .container .content .post-item .meta {
   color: #666;
