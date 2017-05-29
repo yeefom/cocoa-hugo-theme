@@ -1,4 +1,4 @@
-A fork of [Cocoa theme](https://github.com/nishanths/cocoa-hugo-theme).
+Based on [Cocoa theme](https://github.com/nishanths/cocoa-hugo-theme).
 
 Main changes:
 
